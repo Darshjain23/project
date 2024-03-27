@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\css\style.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('template\\header.ejs') %>
+    <section class="trial">
+        <div class="container1">
+            <div class="form-header">
+                <img src="\img\register.jpg">
+            </div>
+            <form action="#" method="post">
+                <label for="username">Username</label>
+                <input type="text1" id="username" name="username" required>
+        
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+        
+                <input type="submit">
+
+                <p>Already have an account? <a href="http://localhost:3000/login">Log in</a></p>
+            </form>
+        </div>        
+    </section>
+</body>
+</html>

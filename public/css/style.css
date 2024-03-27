@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Poppins&display=swap');
+
+html , body{
+    width: 100%;
+    height: 100%;
+}
+
+*{
+    font-family: "Assistant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #282C3F;
+  }
+
+header{
+    position: sticky;
+    top: 0;
+    background: white;
+  }
+
+.left img{
+    width: 53px;
+    height: 40px;
+    cursor: pointer;
+}
+
+nav ul li{
+    list-style-type: none;
+    padding: 0px 16px;
+    cursor: pointer;
+}
+
+.icon span{
+    margin: 0px 20px;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon span label{
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.search{
+    width: 350px;
+    height: 35px;
+    /* border-radius: 50px; */
+    border: none;
+    background: transparent;
+    background-color: #F5F5F6;
+}
+
+.trial{
+    background-color: #FEEEF1;
+    height: 100vh; 
+}
+
+.container1 {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* margin-top: 80px; */
+    margin-top: auto;
+    position: relative;
+    top: 50px;
+}
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-header img {
+    width: 400px;
+    height: 200px;
+    /* border-radius: 50%; */
+}
+
+input[type="text1"],
+    input[type="password"],
+    input[type="email"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #FF3F6C;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #FF3F6C;
+    }
+
+    .login-container {
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* margin-top: 80px; */
+        margin-top: auto;
+        position: relative;
+        top: 50px;
+    }
+  
