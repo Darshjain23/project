@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="\css\style.css">
+</head>
+<body>
+    <%- include('template\\header.ejs') %>
+
+    <table class="table mt-5">
+        <thead>
+          <tr>
+            <th scope="col">sr.no</th>
+            <th scope="col">Product</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+
+            <% order.forEach(function(order,i){ %>
+
+            
+          <tr>
+            <th scope="row"><%= i+1 %></th>
+            <td><%= product[order.product_id].p_name %></td>
+            <td><%= order.qty %></td>
+            <td><%= order.status %></td>
+
+          </tr>
+
+
+          <%})%>
+        </tbody>
+      </table>
+
+
+
+
+
+
+</body>
+</html>

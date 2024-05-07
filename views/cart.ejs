@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="\css\style.css">
+  <style>
+    .underline{
+      font-size: 16px;
+      font-family: 'Courier New', Courier, monospace;
+      text-decoration:line-through;
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('template\\header.ejs') %>
+
+    <!-- <table class="table mt-5">
+      <thead>
+        <tr>
+          <th scope="col">sr.no</th>
+          <th scope="col">Name</th>
+          <th scope="col">Product</th>
+          <th scope="col">Size</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+          <th scope="col">Total</th>
+
+        </tr>
+      </thead>
+      <tbody>
+
+        <% cartDetail.forEach(function(cartItem,i){ %>
+
+
+          <tr>
+            <th scope="row">
+              <%= i+1 %>
+            </th>
+            <td>
+              <%= product[cartItem.product_id-1].p_name %>
+            </td>
+            <td><img src="<%= product[cartItem.product_id-1].img_1 %>" width="100px"></td>
+            <td>
+              <%= cartItem.size %>
+            </td>
+            <td>
+              <%= cartItem.quantity %>
+            </td>
+            <td>
+              <%= product[cartItem.product_id-1].price %>
+            </td>
+            <td>
+              <%= product[cartItem.product_id-1].price*cartItem.quantity %>
+            </td>
+          </tr>
+
+
+          <%})%>
+      </tbody>
+    </table> -->
+
+    <div class="card float-end mt-5 w-25" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Total MRP</h5>
+        <p class="card-text">₹<%= total  %></p>
+        <form method="post" action="/clearcart">
+        <a href="#" class="btn btn-dark">Checkout</a>
+        
+          <button type="submit" class="btn btn-dark">Clear All</button>
+        </form>
+      </div>
+    </div>
+
+    <% cartDetail.forEach(function(cartItem,i){ %>
+
+    <div class="card w-100 my-5 mx-5" style="max-width: 550px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="<%= product[cartItem.product_id-1].img_1 %>" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h3 class="card-title"><%= product[cartItem.product_id-1].p_name %></h3>
+            <h4 class="card-text">Size: <%= cartItem.size %></h4>
+            <h4 class="card-text"><small class="text-body-secondary">QTY: <%= cartItem.quantity %></small></h4>
+            <h4 class="card-text">₹<%= product[cartItem.product_id-1].price*cartItem.quantity %><small class="underline text-body-secondary mx-3">  ₹<%= product[cartItem.product_id-1].price %></small></h4>
+            <!-- <h4 class="card-text">Total: <td></td></h4> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <%})%>
+
+    
+
+    </body>
+</html>

@@ -11,10 +11,13 @@ html , body{
     font-weight: 700;
     font-style: normal;
     color: #282C3F;
+    /* box-sizing: border-box;
+    margin: 0;
+    padding: 0; */
   }
 
 header{
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     background: white;
   }
@@ -29,6 +32,7 @@ nav ul li{
     list-style-type: none;
     padding: 0px 16px;
     cursor: pointer;
+    /* margin-top: 15px; */
 }
 
 .icon span{
@@ -62,7 +66,7 @@ nav ul li{
 
 .trial{
     background-color: #FEEEF1;
-    height: 100vh; 
+    height: 100vh;
 }
 
 .container1 {
@@ -75,14 +79,14 @@ nav ul li{
     /* margin-top: 80px; */
     margin-top: auto;
     position: relative;
-    top: 50px;
+    top: 10px;
 }
 .form-header {
     text-align: center;
     margin-bottom: 20px;
 }
 .form-header img {
-    width: 400px;
+    width: 350px;
     height: 200px;
     /* border-radius: 50%; */
 }
@@ -106,7 +110,7 @@ input[type="text1"],
     }
     input[type="submit"]:hover {
         background-color: #FF3F6C;
-    }
+    }   
 
     .login-container {
         max-width: 400px;
@@ -121,3 +125,78 @@ input[type="text1"],
         top: 50px;
     }
   
+    /* .carou {
+        position: relative;
+        top: 30px;
+    } */
+
+    .medal1{
+        padding: 100px 0px 10px 30px;
+    }
+
+    .card {
+        width: 300px;
+      }
+
+    .card-img-top{
+        cursor: pointer;
+    }
+    
+    .container-fluid-1{
+        justify-content: center;
+    }
+    
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      display: none;
+    }
+
+
+
+      @media only screen and (min-width:200px) and (max-width:750px){
+        
+        .medal{
+            display: none;
+            
+        }
+
+        .medal1 {
+            text-align: center;
+            padding: 100px 0px 10px 0px;
+        }
+        
+        .container{
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .hid{
+            display: none;
+        }
+
+        .card {
+            position: relative;
+            left: 25px;
+          }
+
+        .card-img-top{
+            width: auto;
+            height: auto;
+            cursor: pointer;
+            /* position: relative;
+            left: 30px; */
+            
+        }
+
+        /* img{
+            position: relative;
+            left: 20px;
+        } */
+
+        .container-fluid-1{
+            width: 100%;
+            flex-direction: column;
+        }
+
+    }

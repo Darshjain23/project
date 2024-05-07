@@ -1,21 +1,30 @@
-.flex{
+.lex{
     display: flex;
 }
 
-.container{
-    padding: 0 5vw;
+.cont{
+    padding: 10px 5vw;
     margin: auto;
+    position: sticky;
+    z-index: 1;
 }
 
-.item-center{
+header {
+    position: sticky;
+    
+}
+
+.item-center1{
     align-items: center;
-}
-
-.justify-center{
     justify-content: center;
 }
 
-.space-between{
+
+.justify-center1{
+    justify-content: center;
+}
+
+.space-between1{
     justify-content: space-between;
 }
 

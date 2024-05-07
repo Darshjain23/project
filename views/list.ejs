@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="\css\style.css">
+  <style>
+    .custom-btn {
+      background-color: #FF5733;
+      /* Your desired background color */
+      border-color: #FF5733;
+      /* Border color same as background color */
+      color: #ffffff;
+      /* Text color */
+    }
+
+    .custom-btn:hover {
+      background-color: #FF8148;
+      /* Change color on hover */
+      border-color: #FF8148;
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('template\\header.ejs') %>
+
+    <section class="container">
+      <div class="productList mt-5 d-flex justify-content-around">
+        <div class="row row-cols-1 row-cols-md-4 g-3">
+
+
+          <% product.forEach(function(product,i){ %>
+            <% var url="/Product?id=" + product.id %>
+              <div class="col">
+                <div class="card">
+                  <img src=<%=product.img_1 %> class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <%= product.p_name %>
+                    </h5>
+                    <p class="card-text">₹<%= product.price %>
+                    </p>
+
+                    <a href=<%=url %> class="btn btn-dark custom-btn d-grid">More Details</a>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <% }) %>
+
+
+
+
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+</body>
+
+</html>
